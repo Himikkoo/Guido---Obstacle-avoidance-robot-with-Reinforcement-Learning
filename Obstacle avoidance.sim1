@@ -1,0 +1,81 @@
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="L298P-1" mainComp="false" Show_id="true" Show_Val="false" Pos="720,580" rotation="0" hflip="1" vflip="1" label="L298P-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false" />
+
+<item itemtype="DcMotor" CircId="DcMotor-2" mainComp="false" Show_id="true" Show_Val="false" Pos="860,540" rotation="-90" hflip="1" vflip="1" label="DcMotor-2" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-3" mainComp="false" Show_id="true" Show_Val="false" Pos="1024,408" rotation="0" hflip="1" vflip="1" label="Uno-3" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="3_mega328-109" mainComp="true" Show_id="true" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="3_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="obstacle avoidance.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-8" mainComp="false" Show_id="false" Show_Val="false" Pos="636,476" rotation="-270" hflip="1" vflip="1" label="Fixed Voltage-8" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="false" Voltage="5 V" />
+
+<item itemtype="SR04" CircId="SR04-41" mainComp="false" Show_id="false" Show_Val="false" Pos="920,348" rotation="0" hflip="1" vflip="1" label="SR04-41" idLabPos="-16,-48" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-46" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="672,324" rotation="0" hflip="1" vflip="1" label="Potentiometer-46" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="800 Ω" />
+
+<item itemtype="Rail" CircId="Rail-47" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="556,324" rotation="0" hflip="1" vflip="1" label="Rail-47" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="100 V" />
+
+<item itemtype="Ground" CircId="Ground-48" mainComp="false" Show_id="false" Show_Val="false" Pos="672,368" rotation="0" hflip="1" vflip="1" label="Ground-48" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="DcMotor" CircId="DcMotor-56" mainComp="false" Show_id="true" Show_Val="false" Pos="568,524" rotation="-90" hflip="1" vflip="1" label="DcMotor-56" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Servo" CircId="Servo-99" mainComp="false" Show_id="true" Show_Val="false" Pos="1108,260" rotation="0" hflip="1" vflip="1" label="Servo-99" idLabPos="-16,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" Speed="0.2 _sec/60º" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" />
+
+<item itemtype="Ground" CircId="Ground-103" mainComp="false" Show_id="false" Show_Val="false" Pos="872,284" rotation="0" hflip="1" vflip="1" label="Ground-103" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-32" mainComp="false" Pos="808,688" />
+
+<item itemtype="Node" CircId="Node-77" mainComp="false" Pos="940,596" />
+
+<item itemtype="Node" CircId="Node-101" mainComp="false" Pos="612,324" />
+
+<item itemtype="Connector" uid="connector-104" startpinid="L298P-1-EnA" endpinid="Node-32-0" pointList="712,644,664,644,664,688,808,688" />
+
+<item itemtype="Connector" uid="connector-105" startpinid="L298P-1-IN1" endpinid="Uno-3-8" pointList="712,636,656,636,656,696,956,696,956,496,1032,496" />
+
+<item itemtype="Connector" uid="connector-106" startpinid="L298P-1-IN2" endpinid="Uno-3-7" pointList="712,652,672,652,672,680,948,680,948,480,1032,480" />
+
+<item itemtype="Connector" uid="connector-107" startpinid="L298P-1-Vs" endpinid="Fixed Voltage-8-outnod" pointList="712,628,636,628,636,492" />
+
+<item itemtype="Connector" uid="connector-110" startpinid="L298P-1-SenA" endpinid="Node-32-1" pointList="712,596,616,596,616,756,808,756,808,688" />
+
+<item itemtype="Connector" uid="connector-111" startpinid="Potentiometer-46-PinM" endpinid="Ground-48-Gnd" pointList="672,340,672,352" />
+
+<item itemtype="Connector" uid="connector-112" startpinid="Potentiometer-46-PinB" endpinid="SR04-41-inpin" pointList="688,324,832,324" />
+
+<item itemtype="Connector" uid="connector-115" startpinid="L298P-1-EnB" endpinid="Node-77-0" pointList="768,636,940,636,940,596" />
+
+<item itemtype="Connector" uid="connector-116" startpinid="L298P-1-IN3" endpinid="Uno-3-4" pointList="768,644,976,644,976,456,1032,456" />
+
+<item itemtype="Connector" uid="connector-117" startpinid="L298P-1-IN4" endpinid="Uno-3-5" pointList="768,628,984,628,984,464,1032,464" />
+
+<item itemtype="Connector" uid="connector-118" startpinid="Node-32-2" endpinid="Uno-3-9" pointList="808,688,968,688,968,504,1032,504" />
+
+<item itemtype="Connector" uid="connector-119" startpinid="L298P-1-SenB" endpinid="Node-77-1" pointList="768,596,940,596" />
+
+<item itemtype="Connector" uid="connector-120" startpinid="Node-77-2" endpinid="Uno-3-3" pointList="940,596,940,448,1032,448" />
+
+<item itemtype="Connector" uid="connector-121" startpinid="SR04-41-trigpin" endpinid="Uno-3-2" pointList="920,396,920,440,1032,440" />
+
+<item itemtype="Connector" uid="connector-122" startpinid="Rail-47-outnod" endpinid="Node-101-0" pointList="572,324,612,324" />
+
+<item itemtype="Connector" uid="connector-123" startpinid="SR04-41-outpin" endpinid="Uno-3-6" pointList="928,396,928,472,1032,472" />
+
+<item itemtype="Connector" uid="connector-124" startpinid="Servo-99-in0" endpinid="Node-101-1" pointList="1060,244,612,244,612,324" />
+
+<item itemtype="Connector" uid="connector-125" startpinid="Node-101-2" endpinid="Potentiometer-46-PinA" pointList="612,324,656,324" />
+
+<item itemtype="Connector" uid="connector-126" startpinid="Ground-103-Gnd" endpinid="Servo-99-in1" pointList="872,268,872,260,1060,260" />
+
+<item itemtype="Connector" uid="connector-127" startpinid="Servo-99-in2" endpinid="Uno-3-10" pointList="1060,276,1060,512,1032,512" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="L298P-1-OUT4" endpinid="DcMotor-2-lPin" pointList="768,612,860,612,860,580" />
+
+<item itemtype="Connector" uid="Connector-131" startpinid="L298P-1-OUT3" endpinid="DcMotor-2-rPin" pointList="768,620,804,620,804,500,860,500" />
+
+<item itemtype="Connector" uid="Connector-132" startpinid="L298P-1-OUT2" endpinid="DcMotor-56-lPin" pointList="712,620,568,620,568,564" />
+
+<item itemtype="Connector" uid="Connector-133" startpinid="L298P-1-OUT1" endpinid="DcMotor-56-rPin" pointList="712,612,608,612,608,484,568,484" />
+
+</circuit>
